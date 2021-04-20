@@ -1,0 +1,68 @@
+---
+sidebar_position: 8
+---
+
+# Image
+
+<br />
+
+## Responsive Image
+
+import { Image } from "stoned";
+import "stoned/dist/index.css";
+
+<Image
+  alt="img alt"
+  onClick={(e) => console.log(e)}
+  src="https://www.wonderplugin.com/wp-content/uploads/2016/06/blue-grape-hyacinths.jpg"
+/>
+<br />
+
+```jsx title="src/App.js"
+import { Image } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Image
+        alt="img alt"
+        onClick={(e) => console.log(e)}
+        src="https://www.wonderplugin.com/wp-content/uploads/2016/06/blue-grape-hyacinths.jpg"
+      />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Rounded Responsive Image
+
+<Image
+  alt="img logo rounded"
+  rounded
+  onClick={(e) => console.log(e)}
+  src="https://www.wonderplugin.com/wp-content/uploads/2016/06/blue-grape-hyacinths.jpg"
+/>
+<br />
+
+```jsx title="src/App.js"
+import { Image } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Image
+        alt="img logo rounded"
+        rounded
+        onClick={(e) => console.log(e)}
+        src="https://www.wonderplugin.com/wp-content/uploads/2016/06/blue-grape-hyacinths.jpg"
+      />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```

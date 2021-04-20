@@ -1,0 +1,191 @@
+---
+sidebar_position: 7
+---
+
+# TextField
+
+<br />
+
+## TextField Variants
+
+### TextField Standard
+
+import { TextField } from "stoned";
+import "stoned/dist/index.css";
+
+<TextField
+  onChange={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  type="text"
+  label="Standard"
+/>
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { TextField } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [name, setName] = useState("");
+  return (
+    <React.Fragment>
+      <TextField
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        onClick={(e) => console.log(e)}
+        type="text"
+        label="Standard"
+      />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+### TextField Filled
+
+<TextField
+  onChange={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  type="text"
+  variant="filled"
+  label="Filled"
+/>
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { TextField } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [surname, setSurname] = useState("");
+  return (
+    <React.Fragment>
+      <TextField
+        value={surname}
+        onChange={(e) => setSurname(e.target.value)}
+        onClick={(e) => console.log(e)}
+        type="text"
+        variant="filled"
+        label="Filled"
+      />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+### TextField Outlined
+
+<TextField
+  onChange={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  type="text"
+  variant="outlined"
+  label="Outlined"
+/>
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { TextField } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [branch, setBranch] = useState("");
+  return (
+    <React.Fragment>
+      <TextField
+        value={branch}
+        onChange={(e) => setBranch(e.target.value)}
+        onClick={(e) => console.log(e)}
+        type="text"
+        variant="outlined"
+        label="Outlined"
+      />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Handeling Errors With stoned
+
+<TextField
+  value="this"
+  onChange={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  type="text"
+  label="Error Standard"
+  helperText="this is helper"
+  error={true}
+/>
+<TextField
+  value="is"
+  variant="filled"
+  onChange={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  type="text"
+  label="Error Filled"
+  helperText="this is helper 2"
+  error={true}
+/>
+<TextField
+  value="error"
+  variant="outlined"
+  onChange={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  type="text"
+  label="Error Outlined"
+  helperText="this is helper 3"
+  error={true}
+/>
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { TextField } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [txt4, setTxt4] = useState("this");
+  const [txt5, setTxt5] = useState("is");
+  const [txt6, setTxt6] = useState("error");
+  return (
+    <React.Fragment>
+      <TextField
+        value={txt4}
+        onChange={(e) => setTxt4(e.target.value)}
+        onClick={(e) => console.log(e)}
+        type="text"
+        label="Error Standard"
+        helperText="this is helper"
+        error={true}
+      />
+      <TextField
+        value={txt5}
+        variant="filled"
+        onChange={(e) => setTxt5(e.target.value)}
+        onClick={(e) => console.log(e)}
+        type="text"
+        label="Error Filled"
+        helperText="this is helper 2"
+        error={true}
+      />
+      <TextField
+        value={txt6}
+        variant="outlined"
+        onChange={(e) => setTxt6(e.target.value)}
+        onClick={(e) => console.log(e)}
+        type="text"
+        label="Error Outlined"
+        helperText="this is helper 3"
+        error={true}
+      />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```

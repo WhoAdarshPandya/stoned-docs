@@ -37,7 +37,7 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Docs",
               to: "/docs/intro",
             },
           ],
@@ -47,15 +47,15 @@ module.exports = {
           items: [
             {
               label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              href: "https://stackoverflow.com/questions/tagged/stoned",
             },
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://bit.ly/tanaydiscord",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://twitter.com/codarsh",
             },
           ],
         },
@@ -64,7 +64,7 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/whoadarshpandya/stoned",
             },
           ],
         },

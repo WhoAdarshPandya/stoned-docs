@@ -1,0 +1,230 @@
+---
+sidebar_position: 10
+---
+
+# Badges
+
+<br />
+
+## Badge With Avatar
+
+import { Badge, Avatar, IconButton } from "stoned";
+import "stoned/dist/index.css";
+
+<Badge onClick={(e) => console.log(e)}>
+  <Avatar
+    size="small"
+    src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+    // onClick={(e) => console.log(e)}
+  />
+</Badge>
+<Badge>
+  <Avatar
+    src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+    onClick={(e) => console.log(e)}
+  />
+</Badge>
+<Badge color="secondary">
+  <Avatar
+    size="large"
+    src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+    onClick={(e) => console.log(e)}
+  />
+</Badge>
+
+```jsx title="src/App.js"
+import { Badge, Avatar } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Badge onClick={(e) => console.log(e)}>
+        <Avatar
+          size="small"
+          src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+        />
+      </Badge>
+      <Badge>
+        <Avatar
+          src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+          onClick={(e) => console.log(e)}
+        />
+      </Badge>
+      <Badge color="secondary">
+        <Avatar
+          size="large"
+          src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+          onClick={(e) => console.log(e)}
+        />
+      </Badge>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Badge With Icon
+
+<Badge color="secondary">
+  <IconButton>email</IconButton>
+</Badge>
+<Badge color="primary" anchor="top-right" onClick={(e) => console.log(e)}>
+  <IconButton>email</IconButton>
+</Badge>
+
+```jsx title="src/App.js"
+import { Badge, IconButton } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Badge color="secondary">
+        <IconButton>email</IconButton>
+      </Badge>
+      <Badge color="primary" anchor="top-right" onClick={(e) => console.log(e)}>
+        <IconButton>email</IconButton>
+      </Badge>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Badge Counter With Avatar
+
+<Badge color="primary" anchor="top-right" variant="counter" count={7}>
+  <Avatar
+    src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+    onClick={(e) => console.log(e)}
+  />
+</Badge>
+<Badge color="primary" anchor="top-left" variant="counter" count={7}>
+  <Avatar
+    src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+    onClick={(e) => console.log(e)}
+  />
+</Badge>
+
+```jsx title="src/App.js"
+import { Badge, Avatar } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Badge color="primary" anchor="top-right" variant="counter" count={7}>
+        <Avatar
+          src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+          onClick={(e) => console.log(e)}
+        />
+      </Badge>
+      <Badge color="primary" anchor="top-left" variant="counter" count={7}>
+        <Avatar
+          src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+          onClick={(e) => console.log(e)}
+        />
+      </Badge>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Badge Counter With Icon
+
+<Badge color="secondary" variant="counter" count={0}>
+  <IconButton>email</IconButton>
+</Badge>
+<Badge color="primary" anchor="top-right" variant="counter" count={7}>
+  <IconButton>email</IconButton>
+</Badge>
+
+```jsx title="src/App.js"
+import { Badge, IconButton } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Badge color="secondary" variant="counter" count={0}>
+        <IconButton>email</IconButton>
+      </Badge>
+      <Badge color="primary" anchor="top-right" variant="counter" count={7}>
+        <IconButton>email</IconButton>
+      </Badge>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Badge With Activity Status
+
+<Badge status_badge>
+  <Avatar
+    src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+    onClick={(e) => console.log(e)}
+  />
+</Badge>
+<Badge status_badge anchor="bottom-left">
+  <Avatar
+    src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+    onClick={(e) => console.log(e)}
+  />
+</Badge>
+<Badge status_badge anchor="top-left">
+  <Avatar
+    src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+    onClick={(e) => console.log(e)}
+  />
+</Badge>
+<Badge status_badge anchor="bottom-right">
+  <Avatar
+    src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+    onClick={(e) => console.log(e)}
+  />
+</Badge>
+
+```jsx title="src/App.js"
+import { Badge, Avatar } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Badge status_badge>
+        <Avatar
+          src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+          onClick={(e) => console.log(e)}
+        />
+      </Badge>
+      <Badge status_badge anchor="bottom-left">
+        <Avatar
+          src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+          onClick={(e) => console.log(e)}
+        />
+      </Badge>
+      <Badge status_badge anchor="top-left">
+        <Avatar
+          src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+          onClick={(e) => console.log(e)}
+        />
+      </Badge>
+      <Badge status_badge anchor="bottom-right">
+        <Avatar
+          src="https://pbs.twimg.com/profile_images/1238749114348662784/p9hc5fuP_400x400.jpg"
+          onClick={(e) => console.log(e)}
+        />
+      </Badge>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
