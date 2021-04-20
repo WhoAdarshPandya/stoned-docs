@@ -1,0 +1,135 @@
+---
+sidebar_position: 7
+---
+
+# IconButton
+
+<br />
+
+## Simple Icon Buttons
+
+import { IconButton } from "stoned";
+import "stoned/dist/index.css";
+
+<IconButton>add</IconButton>
+<IconButton>delete</IconButton>
+<IconButton>photos</IconButton>
+
+```jsx title="src/App.js"
+import { IconButton } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <IconButton>add</IconButton>
+      <IconButton>delete</IconButton>
+      <IconButton>photos</IconButton>
+    </React.Fragment>
+  );
+};
+```
+
+## IconButton with Colors
+
+<IconButton color="primary">delete</IconButton>
+<IconButton color="secondary">delete</IconButton>
+
+```jsx title="src/App.js"
+import { IconButton } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <IconButton color="primary">delete</IconButton>
+      <IconButton color="secondary">delete</IconButton>
+    </React.Fragment>
+  );
+};
+```
+
+## IconButton With Different Sizes
+
+<IconButton size="small">thumb_up</IconButton>
+<IconButton size="medium">thumb_up</IconButton>
+<IconButton size="large">thumb_up</IconButton>
+
+```jsx title="src/App.js" import {IconButton} from "stoned"; import "stoned/dist/index.css";
+import { IconButton } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <IconButton size="small">thumb_up</IconButton>
+      <IconButton size="medium">thumb_up</IconButton>
+      <IconButton size="large">thumb_up</IconButton>
+    </React.Fragment>
+  );
+};
+```
+
+## Buttons with Icons
+
+import { Button } from "stoned";
+import "stoned/dist/index.css";
+
+<Button size="small" color="primary" startIcon="save">
+  save
+</Button>
+<Button size="medium" color="primary" startIcon="save">
+  save
+</Button>
+<Button size="large" color="primary" startIcon="cloud_upload">
+  upload
+</Button>
+<Button color="inherit" textColor="textColorPrimary" startIcon="cloud_upload">
+  upload
+</Button>
+
+<Button
+  color="secondary"
+  variant="outlined"
+  textColor="textColorSecondary"
+  endIcon="cloud_upload"
+>
+  upload
+</Button>
+
+```jsx title="src/App.js"
+import { Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Button size="small" color="primary" startIcon="save">
+        save
+      </Button>
+      <Button size="medium" color="primary" startIcon="save">
+        save
+      </Button>
+      <Button size="large" color="primary" startIcon="cloud_upload">
+        upload
+      </Button>
+      <Button
+        color="inherit"
+        textColor="textColorPrimary"
+        startIcon="cloud_upload"
+      >
+        upload
+      </Button>
+
+      <Button
+        color="secondary"
+        variant="outlined"
+        textColor="textColorSecondary"
+        endIcon="cloud_upload"
+      >
+        upload
+      </Button>
+    </React.Fragment>
+  );
+};
+```

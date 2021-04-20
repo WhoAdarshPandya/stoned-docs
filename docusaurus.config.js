@@ -1,17 +1,17 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Stoned UI",
+  tagline: "Hand Crafted React Components Made With Love For Your Next Project",
   url: "https://whoadarshpandya.github.io",
   baseUrl: "/stoned-docs/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "whoadarshpandya", // Usually your GitHub org/user name.
   projectName: "stoned-docs", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "My Site",
+      title: "Stoned",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
@@ -21,10 +21,10 @@ module.exports = {
           type: "doc",
           docId: "intro",
           position: "left",
-          label: "Tutorial",
+          label: "Docs",
         },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/whoadarshpandya/stoned",
           label: "GitHub",
           position: "right",
         },
@@ -79,8 +79,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/",
+          editUrl: "https://github.com/whoadarshpandya/stoned-docs/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

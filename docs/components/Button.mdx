@@ -1,0 +1,154 @@
+---
+sidebar_position: 7
+---
+
+# Button
+
+<br />
+
+## Contained Buttons
+
+import { Button } from "stoned";
+import "stoned/dist/index.css";
+
+<Button color="primary">Primary</Button>
+<Button color="secondary">secondary</Button>
+<Button color="primary" disableRipple>
+  primary (no ripple)
+</Button>
+<Button color="secondary" disableRipple>
+  secondary (no ripple)
+</Button>
+
+```jsx title="src/App.js" import {Button} from "stoned"; import "stoned/dist/index.css";
+const App = () => {
+  return (
+    <React.Fragment>
+      <Button color="primary">primary</Button>
+      <Button color="secondary">secondary</Button>
+      <Button color="primary" disableRipple>
+        primary
+      </Button>
+      <Button color="secondary" disableRipple>
+        secondary
+      </Button>
+    </React.Fragment>
+  );
+};
+```
+
+## Outlined Buttons
+
+import "stoned/dist/index.css";
+
+<Button color="primary" variant="outlined">
+  Primary
+</Button>
+<Button color="secondary" variant="outlined">
+  secondary
+</Button>
+
+```jsx title="src/App.js"
+import { Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Button color="primary" variant="outlined">
+        primary
+      </Button>
+      <Button color="secondary" variant="outlined">
+        secondary
+      </Button>
+    </React.Fragment>
+  );
+};
+```
+
+## Raised Buttons
+
+<Button variant="contained" raised={true}>
+  raised primary
+</Button>
+<Button variant="outlined" color="secondary" raised={true}>
+  raised secondary
+</Button>
+
+```jsx title="src/App.js"
+import { Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Button variant="contained" raised={true}>
+        raised primary
+      </Button>
+      <Button variant="outlined" color="secondary" raised={true}>
+        raised secondary
+      </Button>
+    </React.Fragment>
+  );
+};
+```
+
+## Transparent Buttons
+
+<Button color="inherit" textColor="textColorPrimary">
+  Primary
+</Button>
+<Button color="inherit" textColor="textColorSecondary">
+  Secondary
+</Button>
+
+```jsx title="src/App.js"
+import { Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Button color="inherit" textColor="textColorPrimary">
+        Primary
+      </Button>
+      <Button color="inherit" textColor="textColorSecondary">
+        Secondary
+      </Button>
+    </React.Fragment>
+  );
+};
+```
+
+## Different Sizes Of Buttons
+
+<Button color="primary" size="small">
+  small
+</Button>
+<Button color="primary" size="medium">
+  medium
+</Button>
+<Button color="primary" size="large">
+  large
+</Button>
+
+```jsx title="src/App.js"
+import { Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Button color="primary" size="small">
+        small
+      </Button>
+      <Button color="primary" size="medium">
+        medium
+      </Button>
+      <Button color="primary" size="large">
+        large
+      </Button>
+    </React.Fragment>
+  );
+};
+```
