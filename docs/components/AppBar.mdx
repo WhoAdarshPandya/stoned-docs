@@ -1,0 +1,204 @@
+---
+sidebar_position: 15
+---
+
+# Appbar
+
+<br />
+
+## Appbar with Buttons
+
+import { Appbar } from "stoned";
+import "stoned/dist/index.css";
+
+<Appbar
+  startIcon="menu"
+  renderStartIcon={true}
+  onStartIconClick={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  renderActionButton={true}
+  onActionButtonClick={() => console.log("hi")}
+  actionButtonName="logout"
+/>
+
+<br />
+
+<Appbar
+  startIcon="menu"
+  variant="secondary"
+  renderStartIcon={true}
+  onStartIconClick={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  renderActionButton={true}
+  onActionButtonClick={() => console.log("hi")}
+  actionButtonName="logout"
+/>
+
+<br />
+
+<Appbar
+  variant="dark"
+  startIcon="menu"
+  renderStartIcon={true}
+  onStartIconClick={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  renderActionButton={true}
+  onActionButtonClick={() => console.log("hi")}
+  actionButtonName="logout"
+/>
+
+<br />
+
+```jsx title="src/App.js"
+import { Appbar } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Appbar
+        startIcon="menu"
+        renderStartIcon={true}
+        onStartIconClick={(e) => console.log(e)}
+        onClick={(e) => console.log(e)}
+        renderActionButton={true}
+        onActionButtonClick={() => console.log("hi")}
+        actionButtonName="logout"
+      />
+
+      <br />
+
+      <Appbar
+        startIcon="menu"
+        variant="secondary"
+        renderStartIcon={true}
+        onStartIconClick={(e) => console.log(e)}
+        onClick={(e) => console.log(e)}
+        renderActionButton={true}
+        onActionButtonClick={() => console.log("hi")}
+        actionButtonName="logout"
+      />
+
+      <br />
+
+      <Appbar
+        variant="dark"
+        startIcon="menu"
+        renderStartIcon={true}
+        onStartIconClick={(e) => console.log(e)}
+        onClick={(e) => console.log(e)}
+        renderActionButton={true}
+        onActionButtonClick={() => console.log("hi")}
+        actionButtonName="logout"
+      />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Appbar with Icons
+
+<Appbar
+  startIcon="menu"
+  renderStartIcon={true}
+  onStartIconClick={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  renderIconButton={true}
+  iconButtons={[
+    { name: "email", hasBadge: true, count: 4 },
+    { name: "notifications", count: 9, hasBadge: true },
+    { name: "account_circle", hasBadge: false },
+  ]}
+  onIconButtonClick={(e, name) => console.log(e, name)}
+/>
+<br />
+<Appbar
+  variant="secondary"
+  startIcon="menu"
+  renderStartIcon={true}
+  onStartIconClick={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  renderIconButton={true}
+  iconButtons={[
+    { name: "email", hasBadge: true, count: 4 },
+    { name: "notifications", count: 9, hasBadge: true },
+    { name: "account_circle", hasBadge: false },
+  ]}
+  onIconButtonClick={(e, name) => console.log(e, name)}
+/>
+<br />
+<Appbar
+  variant="dark"
+  startIcon="menu"
+  renderStartIcon={true}
+  onStartIconClick={(e) => console.log(e)}
+  onClick={(e) => console.log(e)}
+  renderIconButton={true}
+  iconButtons={[
+    { name: "email", hasBadge: true, count: 4 },
+    { name: "notifications", count: 9, hasBadge: true },
+    { name: "account_circle", hasBadge: false },
+  ]}
+  onIconButtonClick={(e, name) => console.log(e, name)}
+/>
+
+<br />
+
+```jsx title="src/App.js"
+import { Appbar } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Appbar
+        startIcon="menu"
+        renderStartIcon={true}
+        onStartIconClick={(e) => console.log(e)}
+        onClick={(e) => console.log(e)}
+        renderIconButton={true}
+        iconButtons={[
+          { name: "email", hasBadge: true, count: 4 },
+          { name: "notifications", count: 9, hasBadge: true },
+          { name: "account_circle", hasBadge: false },
+        ]}
+        onIconButtonClick={(e, name) => console.log(e, name)}
+      />
+      <br />
+      <Appbar
+        variant="secondary"
+        startIcon="menu"
+        renderStartIcon={true}
+        onStartIconClick={(e) => console.log(e)}
+        onClick={(e) => console.log(e)}
+        renderIconButton={true}
+        iconButtons={[
+          { name: "email", hasBadge: true, count: 4 },
+          { name: "notifications", count: 9, hasBadge: true },
+          { name: "account_circle", hasBadge: false },
+        ]}
+        onIconButtonClick={(e, name) => console.log(e, name)}
+      />
+      <br />
+      <Appbar
+        variant="dark"
+        startIcon="menu"
+        renderStartIcon={true}
+        onStartIconClick={(e) => console.log(e)}
+        onClick={(e) => console.log(e)}
+        renderIconButton={true}
+        iconButtons={[
+          { name: "email", hasBadge: true, count: 4 },
+          { name: "notifications", count: 9, hasBadge: true },
+          { name: "account_circle", hasBadge: false },
+        ]}
+        onIconButtonClick={(e, name) => console.log(e, name)}
+      />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```

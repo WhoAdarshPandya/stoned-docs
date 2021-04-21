@@ -1,0 +1,578 @@
+---
+sidebar_position: 16
+---
+
+# Grid
+
+<br />
+
+## Grid With Equal Ratio
+
+### Single Column
+
+import { Grid, GridRow, GridColumn, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+<div className="grid_bg">
+  <Grid>
+    <GridRow justifyContent="space-between" alignItems="center">
+      <>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              single col
+            </Typography>
+          </div>
+        </GridColumn>
+      </>
+    </GridRow>
+  </Grid>
+</div>
+<br />
+
+```jsx title="src/App.js"
+import { Grid, GridColumn, GridRow, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <div className="grid_bg">
+      <Grid>
+        <GridRow justifyContent="space-between" alignItems="center">
+          <>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  single col
+                </Typography>
+              </div>
+            </GridColumn>
+          </>
+        </GridRow>
+      </Grid>
+    </div>
+  );
+};
+
+export default App;
+```
+
+### Two Column
+
+<div className="grid_bg">
+  <Grid>
+    <GridRow justifyContent="space-between" alignItems="center">
+      <>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              two col
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              two col
+            </Typography>
+          </div>
+        </GridColumn>
+      </>
+    </GridRow>
+  </Grid>
+</div>
+
+<br />
+
+```jsx title="src/App.js"
+import { Grid, GridColumn, GridRow, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <div className="grid_bg">
+      <Grid>
+        <GridRow justifyContent="space-between" alignItems="center">
+          <>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  two col
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  two col
+                </Typography>
+              </div>
+            </GridColumn>
+          </>
+        </GridRow>
+      </Grid>
+    </div>
+  );
+};
+
+export default App;
+```
+
+### Three Column
+
+<div className="grid_bg">
+  <Grid>
+    <GridRow justifyContent="space-between" alignItems="center">
+      <>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              three col
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              three col
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              three col
+            </Typography>
+          </div>
+        </GridColumn>
+      </>
+    </GridRow>
+  </Grid>
+</div>
+
+<br />
+
+```jsx title="src/App.js"
+import { Grid, GridColumn, GridRow, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <div className="grid_bg">
+      <Grid>
+        <GridRow justifyContent="space-between" alignItems="center">
+          <>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  three col
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  three col
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  three col
+                </Typography>
+              </div>
+            </GridColumn>
+          </>
+        </GridRow>
+      </Grid>
+    </div>
+  );
+};
+
+export default App;
+```
+
+### Four Column
+
+<div className="grid_bg">
+  <Grid>
+    <GridRow justifyContent="space-between" alignItems="center">
+      <>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              four col
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              four col
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              four col
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn gutter>
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              four col
+            </Typography>
+          </div>
+        </GridColumn>
+      </>
+    </GridRow>
+  </Grid>
+</div>
+
+<br />
+
+```jsx title="src/App.js"
+import { Grid, GridColumn, GridRow, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <div className="grid_bg">
+      <Grid>
+        <GridRow justifyContent="space-between" alignItems="center">
+          <>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  four col
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  four col
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  four col
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn gutter>
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  four col
+                </Typography>
+              </div>
+            </GridColumn>
+          </>
+        </GridRow>
+      </Grid>
+    </div>
+  );
+};
+
+export default App;
+```
+
+## Grid With Different Ratio
+
+### 4:8 ratio
+
+<div className="grid_bg">
+  <Grid>
+    <GridRow justifyContent="center" alignItems="center">
+      <>
+        <GridColumn gutter flex={8} alignItems="center" justifyContent="center">
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              eight
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn flex={4} gutter alignItems="center" justifyContent="center">
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              four
+            </Typography>
+          </div>
+        </GridColumn>
+      </>
+    </GridRow>
+  </Grid>
+</div>
+<br />
+
+```jsx title="src/App.js"
+import { Grid, GridRow, GridColumn, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <div className="grid_bg">
+      <Grid>
+        <GridRow justifyContent="center" alignItems="center">
+          <>
+            <GridColumn
+              gutter
+              flex={8}
+              alignItems="center"
+              justifyContent="center"
+            >
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  eight
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn
+              flex={4}
+              gutter
+              alignItems="center"
+              justifyContent="center"
+            >
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  four
+                </Typography>
+              </div>
+            </GridColumn>
+          </>
+        </GridRow>
+      </Grid>
+    </div>
+  );
+};
+
+export default App;
+```
+
+### 2:10 ratio
+
+<div className="grid_bg">
+  <Grid>
+    <GridRow justifyContent="center" alignItems="center">
+      <>
+        <GridColumn gutter flex={2} alignItems="center" justifyContent="center">
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              two
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn
+          flex={10}
+          gutter
+          alignItems="center"
+          justifyContent="center"
+        >
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              ten
+            </Typography>
+          </div>
+        </GridColumn>
+      </>
+    </GridRow>
+  </Grid>
+</div>
+
+<br />
+
+```jsx title="src/App.js"
+import { Grid, GridRow, GridColumn, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <div className="grid_bg">
+      <Grid>
+        <GridRow justifyContent="center" alignItems="center">
+          <>
+            <GridColumn
+              gutter
+              flex={2}
+              alignItems="center"
+              justifyContent="center"
+            >
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  two
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn
+              flex={10}
+              gutter
+              alignItems="center"
+              justifyContent="center"
+            >
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  ten
+                </Typography>
+              </div>
+            </GridColumn>
+          </>
+        </GridRow>
+      </Grid>
+    </div>
+  );
+};
+
+export default App;
+```
+
+### 5:7 ratio
+
+<div className="grid_bg">
+  <Grid>
+    <GridRow justifyContent="center" alignItems="center">
+      <>
+        <GridColumn gutter flex={5} alignItems="center" justifyContent="center">
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              five
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn flex={7} gutter alignItems="center" justifyContent="center">
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              seven
+            </Typography>
+          </div>
+        </GridColumn>
+      </>
+    </GridRow>
+  </Grid>
+</div>
+
+<br />
+
+```jsx title="src/App.js"
+import { Grid, GridRow, GridColumn, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <div className="grid_bg">
+      <Grid>
+        <GridRow justifyContent="center" alignItems="center">
+          <>
+            <GridColumn
+              gutter
+              flex={5}
+              alignItems="center"
+              justifyContent="center"
+            >
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  five
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn
+              flex={7}
+              gutter
+              alignItems="center"
+              justifyContent="center"
+            >
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  seven
+                </Typography>
+              </div>
+            </GridColumn>
+          </>
+        </GridRow>
+      </Grid>
+    </div>
+  );
+};
+
+export default App;
+```
+
+### 1:11 ratio
+
+<div className="grid_bg">
+  <Grid>
+    <GridRow justifyContent="center" alignItems="center">
+      <>
+        <GridColumn gutter flex={1} alignItems="center" justifyContent="center">
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              one
+            </Typography>
+          </div>
+        </GridColumn>
+        <GridColumn
+          flex={11}
+          gutter
+          alignItems="center"
+          justifyContent="center"
+        >
+          <div className="grid_col">
+            <Typography variant="h6" muted>
+              eleven
+            </Typography>
+          </div>
+        </GridColumn>
+      </>
+    </GridRow>
+  </Grid>
+</div>
+
+<br />
+
+```jsx title="src/App.js"
+import { Grid, GridRow, GridColumn, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <div className="grid_bg">
+      <Grid>
+        <GridRow justifyContent="center" alignItems="center">
+          <>
+            <GridColumn
+              gutter
+              flex={1}
+              alignItems="center"
+              justifyContent="center"
+            >
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  one
+                </Typography>
+              </div>
+            </GridColumn>
+            <GridColumn
+              flex={11}
+              gutter
+              alignItems="center"
+              justifyContent="center"
+            >
+              <div className="grid_col">
+                <Typography variant="h6" muted>
+                  eleven
+                </Typography>
+              </div>
+            </GridColumn>
+          </>
+        </GridRow>
+      </Grid>
+    </div>
+  );
+};
+
+export default App;
+```

@@ -1,0 +1,87 @@
+---
+sidebar_position: 14
+---
+
+# Dialog
+
+import { useState } from "react";
+import { Dialog, Button } from "stoned";
+import "stoned/dist/index.css";
+
+export const App = () => {
+  const [showDialog, setShowDialog] = useState(false);
+  return (
+    <React.Fragment>
+      <Button
+        variant="contained"
+        onClick={() => {
+          setShowDialog(true);
+        }}
+        color="primary"
+      >
+        open dialog
+      </Button>
+      {showDialog && (
+        <Dialog
+          onBackdropClick={() => {
+            setShowDialog(false);
+          }}
+          setAutoHide={false}
+          positiveButtonText="okay"
+          negativeButtonText="cancel"
+          buttonKind="textColorPrimary"
+          onPositiveButtonClick={() => {
+            setShowDialog(false);
+          }}
+          onNegativeButtonClick={() => {
+            alert("cancel pressed");
+          }}
+        />
+      )}
+    </React.Fragment>
+  );
+};
+
+<App />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { Dialog, Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [showDialog, setShowDialog] = useState(false);
+  return (
+    <React.Fragment>
+      <Button
+        variant="contained"
+        onClick={() => {
+          setShowDialog(true);
+        }}
+        color="primary"
+      >
+        open dialog
+      </Button>
+      {showDialog && (
+        <Dialog
+          onBackdropClick={() => {
+            setShowDialog(false);
+          }}
+          setAutoHide={false}
+          positiveButtonText="okay"
+          negativeButtonText="cancel"
+          buttonKind="textColorPrimary"
+          onPositiveButtonClick={() => {
+            setShowDialog(false);
+          }}
+          onNegativeButtonClick={() => {
+            alert("cancel pressed");
+          }}
+        />
+      )}
+    </React.Fragment>
+  );
+};
+
+export default App;
+```

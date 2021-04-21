@@ -1,0 +1,551 @@
+---
+sidebar_position: 13
+---
+
+# Toast
+
+<br />
+
+## Standard Toast
+
+import { useState } from "react";
+import { Toast, Button } from "stoned";
+import "stoned/dist/index.css";
+
+export const App = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <div>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show normal toast
+      </Button>
+      {showToast && (
+        <span className="z-plus">
+          <Toast
+            onClick={(e) => {
+              console.log(e);
+            }}
+            onFinish={() => {
+              setShowToast(false);
+            }}
+            renderCloseButton={true}
+            onCloseClick={() => {
+              setShowToast(false);
+            }}
+            autoHideDuration={500}
+            renderActionButton={false}
+            actionButtonName="close"
+            onButtonClick={() => {
+              setShowToast(false);
+            }}
+            message="the standard toast"
+            variant="standard"
+            anchorOrigin={{ vertical: "top", horizontal: "left" }}
+          />
+        </span>
+      )}
+    </div>
+  );
+};
+
+<App />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { Toast, Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <React.Fragment>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show normal toast
+      </Button>
+      {showToast && (
+        <Toast
+          onClick={(e) => {
+            console.log(e);
+          }}
+          onFinish={() => {
+            setShowToast(false);
+          }}
+          renderCloseButton={true}
+          onCloseClick={() => {
+            setShowToast(false);
+          }}
+          autoHideDuration={5}
+          renderActionButton={false}
+          actionButtonName="close"
+          onButtonClick={() => {
+            setShowToast(false);
+          }}
+          message="the standard toast"
+          variant="standard"
+          anchorOrigin={{ vertical: "top", horizontal: "left" }}
+        />
+      )}
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Success Toast
+
+export const SuccessToast = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <div>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show success toast
+      </Button>
+      {showToast && (
+        <span className="z-plus">
+          <Toast
+            onClick={(e) => {
+              console.log(e);
+            }}
+            onFinish={() => {
+              setShowToast(false);
+            }}
+            renderCloseButton={true}
+            onCloseClick={() => {
+              setShowToast(false);
+            }}
+            autoHideDuration={5}
+            renderActionButton={false}
+            actionButtonName="close"
+            onButtonClick={() => {
+              setShowToast(false);
+            }}
+            message="the success toast"
+            variant="success"
+            anchorOrigin={{ vertical: "top", horizontal: "right" }}
+          />
+        </span>
+      )}
+    </div>
+  );
+};
+
+<SuccessToast />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { Toast, Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <React.Fragment>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show success toast
+      </Button>
+      {showToast && (
+        <Toast
+          onClick={(e) => {
+            console.log(e);
+          }}
+          onFinish={() => {
+            setShowToast(false);
+          }}
+          renderCloseButton={true}
+          onCloseClick={() => {
+            setShowToast(false);
+          }}
+          autoHideDuration={5}
+          renderActionButton={false}
+          actionButtonName="close"
+          onButtonClick={() => {
+            setShowToast(false);
+          }}
+          message="the success toast"
+          variant="success"
+          anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        />
+      )}
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Error Toast
+
+export const ErrorToast = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <div>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show error toast
+      </Button>
+      {showToast && (
+        <span className="z-plus">
+          <Toast
+            onClick={(e) => {
+              console.log(e);
+            }}
+            onFinish={() => {
+              setShowToast(false);
+            }}
+            renderCloseButton={true}
+            onCloseClick={() => {
+              setShowToast(false);
+            }}
+            autoHideDuration={5}
+            renderActionButton={false}
+            actionButtonName="close"
+            onButtonClick={() => {
+              setShowToast(false);
+            }}
+            message="the error toast"
+            variant="error"
+            anchorOrigin={{ vertical: "top", horizontal: "center" }}
+          />
+        </span>
+      )}
+    </div>
+  );
+};
+
+<ErrorToast />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { Toast, Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <React.Fragment>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show error toast
+      </Button>
+      {showToast && (
+        <Toast
+          onClick={(e) => {
+            console.log(e);
+          }}
+          onFinish={() => {
+            setShowToast(false);
+          }}
+          renderCloseButton={true}
+          onCloseClick={() => {
+            setShowToast(false);
+          }}
+          autoHideDuration={5}
+          renderActionButton={false}
+          actionButtonName="close"
+          onButtonClick={() => {
+            setShowToast(false);
+          }}
+          message="the error toast"
+          variant="error"
+          anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        />
+      )}
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Info Toast
+
+export const InfoToast = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <div>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show info toast
+      </Button>
+      {showToast && (
+        <span className="z-plus">
+          <Toast
+            onClick={(e) => {
+              console.log(e);
+            }}
+            onFinish={() => {
+              setShowToast(false);
+            }}
+            renderCloseButton={true}
+            onCloseClick={() => {
+              setShowToast(false);
+            }}
+            autoHideDuration={5}
+            renderActionButton={false}
+            actionButtonName="close"
+            onButtonClick={() => {
+              setShowToast(false);
+            }}
+            message="the info toast"
+            variant="info"
+            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          />
+        </span>
+      )}
+    </div>
+  );
+};
+
+<InfoToast />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { Toast, Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <React.Fragment>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show info toast
+      </Button>
+      {showToast && (
+        <Toast
+          onClick={(e) => {
+            console.log(e);
+          }}
+          onFinish={() => {
+            setShowToast(false);
+          }}
+          renderCloseButton={true}
+          onCloseClick={() => {
+            setShowToast(false);
+          }}
+          autoHideDuration={5}
+          renderActionButton={false}
+          actionButtonName="close"
+          onButtonClick={() => {
+            setShowToast(false);
+          }}
+          message="the info toast"
+          variant="info"
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        />
+      )}
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Warning Toast
+
+export const WarningToast = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <div>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show warning toast
+      </Button>
+      {showToast && (
+        <span className="z-plus">
+          <Toast
+            onClick={(e) => {
+              console.log(e);
+            }}
+            onFinish={() => {
+              setShowToast(false);
+            }}
+            renderCloseButton={true}
+            onCloseClick={() => {
+              setShowToast(false);
+            }}
+            autoHideDuration={5}
+            renderActionButton={false}
+            actionButtonName="close"
+            onButtonClick={() => {
+              setShowToast(false);
+            }}
+            message="the warning toast"
+            variant="warning"
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+          />
+        </span>
+      )}
+    </div>
+  );
+};
+
+<WarningToast />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { Toast, Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <React.Fragment>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show warning toast
+      </Button>
+      {showToast && (
+        <Toast
+          onClick={(e) => {
+            console.log(e);
+          }}
+          onFinish={() => {
+            setShowToast(false);
+          }}
+          renderCloseButton={true}
+          onCloseClick={() => {
+            setShowToast(false);
+          }}
+          autoHideDuration={5}
+          renderActionButton={false}
+          actionButtonName="close"
+          onButtonClick={() => {
+            setShowToast(false);
+          }}
+          message="the warning toast"
+          variant="warning"
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        />
+      )}
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Toast With Action
+
+export const ActionToast = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <div>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show button with action
+      </Button>
+      {showToast && (
+        <span className="z-plus">
+          <Toast
+            onClick={(e) => {
+              console.log(e);
+            }}
+            onFinish={() => {
+              setShowToast(false);
+            }}
+            renderCloseButton={false}
+            onCloseClick={() => {
+              setShowToast(false);
+            }}
+            autoHideDuration={5}
+            renderActionButton={true}
+            actionButtonName="close"
+            onButtonClick={() => {
+              setShowToast(false);
+            }}
+            message="toast with button"
+            variant="standard"
+            anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+          />
+        </span>
+      )}
+    </div>
+  );
+};
+
+<ActionToast />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { Toast, Button } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [showToast, setShowToast] = useState(false);
+  return (
+    <React.Fragment>
+      <Button
+        onClick={() => {
+          setShowToast((prev) => !prev);
+        }}
+      >
+        show toast with button
+      </Button>
+      {showToast && (
+        <Toast
+          onClick={(e) => {
+            console.log(e);
+          }}
+          onFinish={() => {
+            setShowToast5(false);
+          }}
+          renderCloseButton={false}
+          onCloseClick={() => {
+            setShowToast5(false);
+          }}
+          autoHideDuration={5}
+          renderActionButton={true}
+          actionButtonName="close"
+          onButtonClick={() => {
+            setShowToast5(false);
+          }}
+          message="toast with button"
+          variant="standard"
+          anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+        />
+      )}
+    </React.Fragment>
+  );
+};
+
+export default App;
+```

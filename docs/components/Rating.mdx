@@ -1,0 +1,50 @@
+---
+sidebar_position: 12
+---
+
+#Rating
+
+<br />
+
+## Rating Primary
+
+import { Rating } from "stoned";
+import "stoned/dist/index.css";
+
+<Rating onChange={(e) => console.log(e)} />
+<br />
+
+```jsx title="src/App.js"
+import { Rating } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Rating onChange={(value) => console.log(value)} />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Rating Secondary
+
+<Rating onChange={(e) => console.log(e)} color="secondary" />
+<br />
+
+```jsx title="src/App.js"
+import { Rating } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  return (
+    <React.Fragment>
+      <Rating onChange={(value) => console.log(value)} color="secondary" />
+    </React.Fragment>
+  );
+};
+
+export default App;
+```

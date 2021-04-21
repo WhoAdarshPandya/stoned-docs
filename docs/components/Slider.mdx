@@ -1,0 +1,69 @@
+---
+sidebar_position: 11
+---
+
+# Slider
+
+<br />
+
+## Slider Primary
+
+import { Slider } from "stoned";
+import "stoned/dist/index.css";
+
+<Slider initial={0} max={100} onChange={(value) => console.log(value)} />
+<br />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { Slider } from "react";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [value, setValue] = useState("");
+  return (
+    <React.Fragment>
+      <Slider initial={0} max={100} onChange={(value) => setValue(value)} />
+      <span>{value}</span>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## Slider Secondary
+
+<Slider
+  initial={0}
+  max={100}
+  color="secondary"
+  onChange={(value) => console.log(value)}
+  onClick={(e) => console.log(e)}
+/>
+
+<br />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { Slider } from "react";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [value, setValue] = useState("");
+  return (
+    <React.Fragment>
+      <Slider
+        initial={0}
+        max={100}
+        color="secondary"
+        onChange={(value) => setValue(value)}
+        onClick={(e) => console.log(e)}
+      />
+      <span>{value}</span>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```

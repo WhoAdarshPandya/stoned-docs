@@ -1,0 +1,265 @@
+---
+sidebar_position: 18
+---
+
+# List
+
+<br />
+
+## Spaced List
+
+import { useState } from "react";
+import {
+  List,
+  ListItem,
+  Avatar,
+  Divider,
+  IconButton,
+  Typography,
+} from "stoned";
+import "stoned/dist/index.css";
+
+export const SpacedList = () => {
+  const [data] = useState([
+    {
+      profle_url:
+        "https://filmspell.com/wp-content/uploads/2019/03/Manoj-Bajpayee-Sardar-Khan-Gangs-of-Wasseypur-I-2012-420x280.jpg",
+      name: "Sardar Khan",
+      dialogue: "hazrat hazrat hazrat",
+    },
+    {
+      profle_url:
+        "https://www.india.com/wp-content/uploads/2014/01/ramadhir-singh.jpg",
+      name: "Ramadhir Singh",
+      dialogue: "saale sanp ko paal rahe the",
+    },
+    {
+      profle_url:
+        "https://images.firstpost.com/wp-content/uploads/2020/06/jaideep-ahlawat-640.jpg?impolicy=website&width=1200&height=800",
+      name: "Shahid Khan",
+      dialogue: "harami man sala mane kaise",
+    },
+  ]);
+  return (
+    <div className="centerAlign">
+      <List elevation={6}>
+        <>
+          <Typography variant="body1" muted>
+            GOW Fans
+          </Typography>
+          {data.map(({ dialogue, name, profle_url }) => (
+            <ListItem key={name}>
+              <>
+                <div className="user-datta">
+                  <Avatar size="small" src={profle_url} />
+                  <div className="user-detail">
+                    <Typography variant="body1">{name}</Typography>
+                    <Typography variant="body2" muted>
+                      {dialogue}
+                    </Typography>
+                  </div>
+                </div>
+                <div>
+                  <IconButton size="small">delete</IconButton>
+                </div>
+              </>
+            </ListItem>
+          ))}
+        </>
+      </List>
+    </div>
+  );
+};
+
+<SpacedList />
+<br />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import { List, ListItem, Avatar, IconButton, Typography } from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [data] = useState([
+    {
+      profle_url:
+        "https://filmspell.com/wp-content/uploads/2019/03/Manoj-Bajpayee-Sardar-Khan-Gangs-of-Wasseypur-I-2012-420x280.jpg",
+      name: "Sardar Khan",
+      dialogue: "hazrat hazrat hazrat",
+    },
+    {
+      profle_url:
+        "https://www.india.com/wp-content/uploads/2014/01/ramadhir-singh.jpg",
+      name: "Ramadhir Singh",
+      dialogue: "saale sanp ko paal rahe the",
+    },
+    {
+      profle_url:
+        "https://images.firstpost.com/wp-content/uploads/2020/06/jaideep-ahlawat-640.jpg?impolicy=website&width=1200&height=800",
+      name: "Shahid Khan",
+      dialogue: "harami man sala mane kaise",
+    },
+  ]);
+  return (
+    <div className="centerAlign">
+      <List elevation={6}>
+        <>
+          <Typography variant="body1" muted>
+            GOW Fans
+          </Typography>
+          {data.map(({ dialogue, name, profle_url }) => (
+            <ListItem key={name}>
+              <>
+                <div className="user-datta">
+                  <Avatar size="small" src={profle_url} />
+                  <div className="user-detail">
+                    <Typography variant="body1">{name}</Typography>
+                    <Typography variant="body2" muted>
+                      {dialogue}
+                    </Typography>
+                  </div>
+                </div>
+                <div>
+                  <IconButton size="small">delete</IconButton>
+                </div>
+              </>
+            </ListItem>
+          ))}
+        </>
+      </List>
+    </div>
+  );
+};
+
+export default App;
+```
+
+## Stacked List
+
+export const StackedList = () => {
+  const [data] = useState([
+    {
+      profle_url:
+        "https://filmspell.com/wp-content/uploads/2019/03/Manoj-Bajpayee-Sardar-Khan-Gangs-of-Wasseypur-I-2012-420x280.jpg",
+      name: "Sardar Khan",
+      dialogue: "hazrat hazrat hazrat",
+    },
+    {
+      profle_url:
+        "https://www.india.com/wp-content/uploads/2014/01/ramadhir-singh.jpg",
+      name: "Ramadhir Singh",
+      dialogue: "saale sanp ko paal rahe the",
+    },
+    {
+      profle_url:
+        "https://images.firstpost.com/wp-content/uploads/2020/06/jaideep-ahlawat-640.jpg?impolicy=website&width=1200&height=800",
+      name: "Shahid Khan",
+      dialogue: "harami man sala mane kaise",
+    },
+  ]);
+  return (
+    <div className="centerAlign">
+      <List elevation={6}>
+        <>
+          <Typography variant="body1" muted>
+            GOW Fans
+          </Typography>
+          {data.map(({ dialogue, name, profle_url }) => (
+            <React.Fragment key={name}>
+              <ListItem key={name}>
+                <>
+                  <div className="user-datta">
+                    <Avatar size="small" src={profle_url} />
+                    <div className="user-detail">
+                      <Typography variant="body1">{name}</Typography>
+                      <Typography variant="body2" muted>
+                        {dialogue}
+                      </Typography>
+                    </div>
+                  </div>
+                  <div>
+                    <IconButton size="small">share</IconButton>
+                  </div>
+                </>
+              </ListItem>
+              <Divider />
+            </React.Fragment>
+          ))}
+        </>
+      </List>
+    </div>
+  );
+};
+
+<StackedList />
+<br />
+
+```jsx title="src/App.js"
+import { useState } from "react";
+import {
+  List,
+  ListItem,
+  Divider,
+  Avatar,
+  IconButton,
+  Typography,
+} from "stoned";
+import "stoned/dist/index.css";
+
+const App = () => {
+  const [data] = useState([
+    {
+      profle_url:
+        "https://filmspell.com/wp-content/uploads/2019/03/Manoj-Bajpayee-Sardar-Khan-Gangs-of-Wasseypur-I-2012-420x280.jpg",
+      name: "Sardar Khan",
+      dialogue: "hazrat hazrat hazrat",
+    },
+    {
+      profle_url:
+        "https://www.india.com/wp-content/uploads/2014/01/ramadhir-singh.jpg",
+      name: "Ramadhir Singh",
+      dialogue: "saale sanp ko paal rahe the",
+    },
+    {
+      profle_url:
+        "https://images.firstpost.com/wp-content/uploads/2020/06/jaideep-ahlawat-640.jpg?impolicy=website&width=1200&height=800",
+      name: "Shahid Khan",
+      dialogue: "harami man sala mane kaise",
+    },
+  ]);
+  return (
+    <div className="centerAlign">
+      <List elevation={6}>
+        <>
+          <Typography variant="body1" muted>
+            GOW Fans
+          </Typography>
+          {data.map(({ dialogue, name, profle_url }) => (
+            <React.Fragment key={name}>
+              <ListItem key={name}>
+                <>
+                  <div className="user-datta">
+                    <Avatar size="small" src={profle_url} />
+                    <div className="user-detail">
+                      <Typography variant="body1">{name}</Typography>
+                      <Typography variant="body2" muted>
+                        {dialogue}
+                      </Typography>
+                    </div>
+                  </div>
+                  <div>
+                    <IconButton size="small">share</IconButton>
+                  </div>
+                </>
+              </ListItem>
+              <Divider />
+            </React.Fragment>
+          ))}
+        </>
+      </List>
+    </div>
+  );
+};
+
+export default App;
+```
